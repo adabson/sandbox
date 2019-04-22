@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", event => {
-
 	const app = firebase.app();
-	// console.log(app);
-
 	const db = firebase.firestore();
-
 	const myPost = db.collection('posts').doc('firstpost');
+	// console.log(app);
 
 	myPost.get()
 		.then(doc => {
@@ -29,3 +26,4 @@ function googleLogin() {
 			// console.log(user);
 		});
 }
+
