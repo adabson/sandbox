@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", event => {
 	const productsRef = db.collection('products');
 
 	const query = productsRef
-		.orderBy('price')
+		.orderBy('price', 'desc')
+		.limit(2)
 		.where('price', '>=', 10);
 
 	query.get()
