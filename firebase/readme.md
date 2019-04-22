@@ -32,3 +32,28 @@ Downsides to cloud:
 	Higher lag 
 	if you do lots of small reads+writes per second, it could get more costly than real time database 
 
+simple dataset read frequently -> use realtime db
+larger dataset with relational dataset -> use cloud firestore 
+
+firebase follows mongodb (concept of documents), most widely adopted no-sql db in the world
+firestore noSql data modelling 
+data simmilar to js object 
+
+      allow read, write;
+      allows all
+
+      allow read, write: if false; // < delete : if false to go ham and let anyone write
+
+			if request.auth.uid != null;
+
+https://firebase.google.com/docs/firestore/security/get-started?authuser=0
+
+replace 
+    <script defer src="/__/firebase/5.10.0/firebase-database.js"></script>
+with 
+    <script defer src="/__/firebase/5.10.0/firebase-firestore.js"></script>
+
+(lat,long) = (-33,151)
+= integer point closest to Newcastle
+
+user auth system directly tied to your database
