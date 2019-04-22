@@ -13,9 +13,10 @@ admin.initializeApp(functions.config().firebase);
 
 exports.sendMessage = functions.firestore 
 	.document('products/{productId}')
-	.onCreate((snapshot, context) => {
+	.onCreate((snap, context) => {
 		const docId: number = context.params.productId;
-		const name: string = snapshot.data.name;
+		const value: any = snap.data();
+		const name: string = value.name;
 		const productRef: any = admin.firestore().collection('products').doc(docId);
 		return productRef.update({message: `Nice ${name}! - Love Cloud Funcs`})
 	})
