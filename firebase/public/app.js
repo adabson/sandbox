@@ -3,11 +3,13 @@ document.addEventListener("DOMContentLoaded", event => {
 	const db = firebase.firestore();
 	const myPost = db.collection('posts').doc('firstpost');
 
-	document.getElementById('loginButton').style = "display:block";
+	// document.getElementById('loginButton').style = "display:block";
 	myPost.onSnapshot(doc => {
 		const data = doc.data();
 		const createdAt = new Date(data.createdAt.seconds * 1000);
-		document.write( `<b>${data.title}</b> (${createdAt})<br>`);
+		// document.write( `<b>${data.title}</b> (${createdAt})<br>`);
+
+		document.querySelector('#title').innerText = data.title;
 
 	});
 });
@@ -23,3 +25,8 @@ function googleLogin() {
 		});
 }
 
+function updatePost(e) {
+	const db = firebase.firestore();
+	const myPost = db.collection('posts').doc('firstpost');
+	myPost.update({title: e.target.value });
+}

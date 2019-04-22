@@ -57,5 +57,13 @@ with
 = integer point closest to Newcastle
 
 user auth system directly tied to your database
-
 we can listen to data changes in realtime 
+myPost.onSnapshot(doc => {...});
+
+^ really cool. 
+If your app is realtime in nature,
+this could save a whole lot of time :)
+
+firebase does OPTIMISTIC UPDATES
+(if you have a listener on the field,
+it updates ui imediatly while sending to backend)

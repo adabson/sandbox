@@ -14,10 +14,19 @@
     <script defer src="/__/firebase/5.10.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
   </head>
   <body>
-    ...
-    <button id="loginButton" onclick="googleLogin()" style="display:none;">Login with Google</button>
+
+    <h1 id="title">Hello firebase</h1>
+    <input onchange="updatePost(event)">
+
+<!--     ...
+    <button id="loginButton" onclick="googleLogin()" style="display:none;">Login with Google</button> -->
     <script src="app.js"></script>
   </body>
 </html>
