@@ -80,3 +80,20 @@ ie
 
 returns all products whos price is greater than 10 
 
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.10.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.10.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.10.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/5.10.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.10.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+firebase.json SPA url rewrites: 
+    // ,"rewrites": [
+    //   {
+    //     "source": "**",
+    //     "destination": "/index.html"
+    //   }
+    // ]

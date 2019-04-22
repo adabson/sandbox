@@ -14,9 +14,8 @@
   </head>
   <body>
     <!-- <button id="loginButton" onclick="googleLogin()">Login with Google</button> -->
-    <h3>Storage uploads</h3>
-    <input type="file" style="width:900px" onchange="uploadFile(this.files)"><br>
-    <img id="imgUpload" src="" width="100%">
+    <h1 id="title">Update and enter below</h1>
+    <input onchange="updatePost(event)">
     <script>
 function googleLogin() {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -28,20 +27,35 @@ function googleLogin() {
 
 document.addEventListener("DOMContentLoaded", event => {
   const app = firebase.app();
+  const db = firebase.firestore();
+  const myPost = db.collection('posts').doc('firstpost');
+
+  // document.getElementById('loginButton').style = "display:block";
+  myPost.onSnapshot(doc => {
+    const data = doc.data();
+    const createdAt = new Date(data.createdAt.seconds * 1000);
+    // document.write( `<b>${data.title}</b> (${createdAt})<br>`);
+
+    document.querySelector('#title').innerText = data.title;
+
+  });
 });
 
-function uploadFile(files) {
-  const file = files.item(0);
-  const storageRef = firebase.storage().ref();
-  const horseRef = storageRef.child(file.name);
-
-  const task = horseRef.put(file);
-  task.then(snapshot => {
-    console.log(snapshot);
-    snapshot.ref.getDownloadURL().then( url => {
-      document.querySelector('#imgUpload').setAttribute('src', url);
+function googleLogin() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then( result => {
+      const user = result.user;
+      document.write(`Hello ${user.displayName}`);
+      // console.log(user);
     });
-  })
+}
+
+function updatePost(e) {
+  const db = firebase.firestore();
+  const myPost = db.collection('posts').doc('firstpost');
+  myPost.update({title: e.target.value });
 }
     </script>
   </body>

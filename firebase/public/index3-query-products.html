@@ -13,10 +13,8 @@
     <style>body {font-family: Arial, sans-serif;}</style>
   </head>
   <body>
-    <!-- <button id="loginButton" onclick="googleLogin()">Login with Google</button> -->
-    <h3>Storage uploads</h3>
-    <input type="file" style="width:900px" onchange="uploadFile(this.files)"><br>
-    <img id="imgUpload" src="" width="100%">
+    <button id="loginButton" onclick="googleLogin()">Login with Google</button>
+    <h1 id="title">Loading products ...</h1>
     <script>
 function googleLogin() {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -28,21 +26,22 @@ function googleLogin() {
 
 document.addEventListener("DOMContentLoaded", event => {
   const app = firebase.app();
-});
+  const db = firebase.firestore();
+  const productsRef = db.collection('products');
 
-function uploadFile(files) {
-  const file = files.item(0);
-  const storageRef = firebase.storage().ref();
-  const horseRef = storageRef.child(file.name);
+  const query = productsRef
+    .orderBy('price', 'desc')
+    .limit(2)
+    .where('price', '>=', 10);
 
-  const task = horseRef.put(file);
-  task.then(snapshot => {
-    console.log(snapshot);
-    snapshot.ref.getDownloadURL().then( url => {
-      document.querySelector('#imgUpload').setAttribute('src', url);
+  query.get()
+    .then(products => {
+      products.forEach(doc => {
+        data = doc.data();
+        document.write(`${data.name} at $${data.price}<br>`);
+      })
     });
-  })
-}
+});
     </script>
   </body>
 </html>
