@@ -5,10 +5,12 @@ firebase login
 firebase init hosting
 firebase serve
 firebase deploy 
+npm i -g firebase-tools
+firebase init functions
+firebase deploy --only functions
 
 >create firebase project 
 >enable google auth
-
 Firebase uses json web tokens for authentication,
 so there's an encrypted token on the browser to id the user 
 
@@ -97,3 +99,15 @@ firebase.json SPA url rewrites:
     //     "destination": "/index.html"
     //   }
     // ]
+
+functions ~ kinda like your own 
+node.js server that runs on demand.
+
+instead of having one app, 
+create microservices that 
+handle 1 specific function.
+
+you can share info between backend code + database.
+see /functions directory 
+
+the admin sdk can only be used in a cloud-like environment
