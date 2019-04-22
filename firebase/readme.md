@@ -67,3 +67,16 @@ this could save a whole lot of time :)
 firebase does OPTIMISTIC UPDATES
 (if you have a listener on the field,
 it updates ui imediatly while sending to backend)
+
+with firestore, you can query docs in a very expressive way
+
+query operators:
+	* field
+	* operator 
+	* value 
+
+ie 
+`	const query = productsRef.where('price', '>', 10);`
+
+returns all products whos price is greater than 10 
+

@@ -1,32 +1,19 @@
 document.addEventListener("DOMContentLoaded", event => {
 	const app = firebase.app();
 	const db = firebase.firestore();
-	const myPost = db.collection('posts').doc('firstpost');
+	const productsRef = db.collection('products');
 
-	// document.getElementById('loginButton').style = "display:block";
-	myPost.onSnapshot(doc => {
-		const data = doc.data();
-		const createdAt = new Date(data.createdAt.seconds * 1000);
-		// document.write( `<b>${data.title}</b> (${createdAt})<br>`);
+	const query = productsRef.where('price', '>', 10);
 
-		document.querySelector('#title').innerText = data.title;
-
-	});
+	console.log('hi');
+	query.get()
+		.then(products => {
+			console.log('d', products);
+			products.forEach(doc => {
+				console.log('eee');
+				data = doc.data();
+				document.write(`${data.name} at $${data.price}<br>`);
+			})
+		});
 });
 
-function googleLogin() {
-	const provider = new firebase.auth.GoogleAuthProvider();
-	firebase.auth()
-	  .signInWithPopup(provider)
-		.then( result => {
-			const user = result.user;
-			document.write(`Hello ${user.displayName}`);
-			// console.log(user);
-		});
-}
-
-function updatePost(e) {
-	const db = firebase.firestore();
-	const myPost = db.collection('posts').doc('firstpost');
-	myPost.update({title: e.target.value });
-}
