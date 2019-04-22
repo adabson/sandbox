@@ -5,3 +5,7 @@ firebase login
 firebase init hosting
 firebase serve
 firebase deploy 
+
+
+>create firebase project 
+>enable google auth
