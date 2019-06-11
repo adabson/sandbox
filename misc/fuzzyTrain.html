@@ -1,0 +1,27 @@
+<script>
+a = ["dinosaur", "lamb", "princess", "reindeer", "train"]
+b = ["back", "bells", "body", "bows", "crown", "dress", "ears",
+  "engine", "fan", "flippers", "funnel", "hooves", "horns", "neck",
+  "nose", "roof", "sash", "side", "spines", "spots", "tail", "teeth",
+  "tiara", "wheels", "windows"]
+c = ["bumpy", "fluffy", "furry", "fuzzy", "glittery", "glossy",
+  "hairy", "red", "rough", "rusty", "shiny", "silky", "slippery", 
+  "soft", "sparkly", "squashy", "thick", "velvety", "woolly"]
+
+/*
+https://codegolf.stackexchange.com/questions/186576/thats-not-my-x-its-y-is-too-z
+That's not my train, its engine is too rusty.
+That's not my train, its hooves is too thick.
+That's not my train, its sash is too fuzzy.
+That's not my train, its tail is too velvety.
+That's not my train, its horns is too glittery.
+That's my train! Its hooves is so hairy.
+*/
+
+r=x=>{return x[parseInt(Math.random()*x.length)]}
+s=r(a)
+g=j=>`not my ${s}, its ${r(b)} is too ${r(c)}.`
+h=j=>`my ${s}! Its ${r(b)} is so ${r(c)}.`
+for(i=0;i<6;i++)console.log("That's "+(i<5?g:h)())
+
+</script>
