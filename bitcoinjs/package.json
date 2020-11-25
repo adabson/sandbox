@@ -1,14 +1,15 @@
 {
-  "name": "btc",
+  "name": "bitcoinjs",
   "version": "1.0.0",
   "description": "bonk",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BoW",
   "license": "ISC",
   "dependencies": {
-    "bitcoinjs-lib": "^5.2.0"
+    "bitcoinjs-lib": "^3.3.2"
   }
 }
