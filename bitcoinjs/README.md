@@ -23,7 +23,6 @@
   * We use v 3.3.2 of bitcoinjs-lib (`keyPair.getAddress()` has since been refactored)
   * Will write to a file called `WIN-[unixTimestamp]` if successfull (test by setting `testing=true`)
   * WIF is a way of encoding a private ECDSA (Elliptic Curve Digital Signature Algorithm) key
-  * Compressed encoding of the public key, the private key gets an extra 0x01 byte at the end, resulting in a base58 form that starts with `K` or `L`
   * Example:
     ```
     const keyPair = bitcoin.ECPair.makeRandom();
