@@ -1,5 +1,5 @@
 <svg width="200" height="200"
   xmlns="http://www.w3.org/2000/svg">
   <style>svg,img{-webkit-animation:spin 40s linear infinite;}@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }</style>
-  <image href="https://cybercx-juiceshop.herokuapp.com/assets/public/images/uploads/defaultAdmin.png" height="236" width="90%"/>
+  <image href="http://thenewcode.com/assets/svg/homer-simpson-scalable.svg" height="236" width="90%"/>
 </svg>
