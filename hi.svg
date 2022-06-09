@@ -48,3 +48,4 @@ svg,img{-webkit-animation:spin 40s linear infinite;}@-webkit-keyframes spin { 10
 <path fill="#EF3D25" d="M209.648,128.194c-0.841,0.113-17.177,2.8-19.153,11.005c-1.573,6.537,5.536,19.816,5.536,24.399 c4.862,0.901,9.493-2.008,13.98-3.388c4.489-1.379-3.46-11.632-2.862-15.131c0.598-3.499,2.973-1.707,4.496-3.207 c1.524-1.5,8.452-5.854,6.355-11.681C217.332,128.335,214.732,127.515,209.648,128.194z"/>
 <path fill="none" stroke="#010101" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M213.15,141.376 c0,0-9.433,3.782-10.522,6.972"/>
 <path fill="none" stroke="#010101" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M197.846,131.557 c3.877,0.45,8.595-0.095,10.682,1.903"/>
+</svg>
