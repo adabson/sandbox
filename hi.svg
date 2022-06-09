@@ -4,7 +4,7 @@
 .orange { fill: #D6A563; }
 .yellow { fill: #FFD035; }
 .white { fill: #FFF; }
-svg,img{-webkit-animation:spin 40s linear infinite;}@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+svg,img,button{-webkit-animation:spin 40s linear infinite;}@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 </style>
 <g id="XMLID_2_">
 <g>
