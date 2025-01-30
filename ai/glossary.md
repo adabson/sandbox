@@ -1,0 +1,38 @@
+# AI Glossary
+
+- **AI**: Artificial Intelligence - The simulation of human intelligence in machines
+- **API**: Application Programming Interface - Interface for system communication
+- **AWS**: Amazon Web Services - Cloud computing platform
+- **Azure**: Microsoft's cloud computing platform
+- **Big Data**: Large, complex datasets requiring specialized processing
+- **CLI**: Command-Line Interface - Text-based interface for commands
+- **CNN**: Convolutional Neural Network - Neural network for image processing
+- **CV**: Computer Vision - AI focused on image and video processing
+- **Cloud**: Remote computing resources over the internet
+- **DL**: Deep Learning - A subset of ML using neural networks with multiple layers
+- **EC2**: Amazon Elastic Compute Cloud - Virtual server service
+- **FPGA**: Field-Programmable Gate Array - Integrated circuit for custom logic
+- **GAN**: Generative Adversarial Network - AI models generating new content
+- **GCP**: Google Cloud Platform - Google's cloud services
+- **GraphQL**: Query language for APIs and data graph
+- **Hadoop**: Open-source framework for distributed data processing
+- **IoT**: Internet of Things - Network of interconnected devices
+- **Jupyter**: Jupyter Notebook - Environment for interactive computing
+- **KNN**: K-Nearest Neighbors - A supervised learning algorithm using proximity for prediction
+- **LSTM**: Long Short-Term Memory - RNN variant handling long-term dependencies
+- **Lambda**: AWS service for serverless computing
+- **MCP**: Model Context Protocol - an open standard that allows AI to interact with external data sources while providing context
+- **ML**: Machine Learning - A subset of AI focused on algorithms learning from data
+- **NLG**: Natural Language Generation - AI generating human language
+- **NLP**: Natural Language Processing - AI focused on human language understanding
+- **NLU**: Natural Language Understanding - AI understanding human language
+- **NN**: Neural Network - A network of algorithms inspired by the human brain
+- **R**: Programming language for statistical computing
+- **RL**: Reinforcement Learning - ML where agents learn through trial and error
+- **RNN**: Recurrent Neural Network - Neural network for sequential data
+- **S3**: Amazon Simple Storage Service - Cloud storage service
+- **STT**: Speech-to-Text - Converting speech to text
+- **SVM**: Support Vector Machine - A supervised learning algorithm for classification
+- **Spark**: Open-source framework for large-scale data processing
+- **TPU**: Tensor Processing Unit - Google's custom AI accelerator chip
+- **TTS**: Text-to-Speech - Converting text to spoken language
