@@ -27,6 +27,7 @@
 - **NLP**: Natural Language Processing - AI focused on human language understanding
 - **NLU**: Natural Language Understanding - AI understanding human language
 - **NN**: Neural Network - A network of algorithms inspired by the human brain
+- **Proompt**: ohh! ohhh! ohhhhhh! I'm gonna PROOOMMMPPPTT youtu.be/-2k1rcRzsLA?t=48s
 - **R**: Programming language for statistical computing
 - **RL**: Reinforcement Learning - ML where agents learn through trial and error
 - **RNN**: Recurrent Neural Network - Neural network for sequential data
